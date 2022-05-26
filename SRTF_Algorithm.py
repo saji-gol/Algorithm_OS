@@ -41,7 +41,7 @@ def Gantt_Chart(Name, ProcessInfo, CS):
     seen = []
 
     while (1):
-        if CS > 0:
+        if CS > 0 and seen != []:
             CurentTime += CS
             Line1 += str(f'\t|')
             Line3 += str(f'\t{CurentTime}')
