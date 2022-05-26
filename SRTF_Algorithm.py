@@ -1,6 +1,4 @@
 import os
-from sys import flags
-
 
 def Sort(ProcessList, ProcessName):
 
@@ -81,12 +79,12 @@ def Gantt_Chart(Name, ProcessInfo, CS):
             StartFinishProcess[TurnIndex][1] = CurentTime
 
         counter += 1
-        flags = 0
+        flag = 0
         for i in ProcessInfo:
             if i[2] > 0:
-                flags = 1
+                flag = 1
                 break
-        if flags == 0:
+        if flag == 0:
             break
 
     print('\nGantt : \n', Line1, '\n', Line3)
