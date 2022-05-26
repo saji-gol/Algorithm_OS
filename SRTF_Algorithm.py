@@ -35,17 +35,10 @@ def Sort(ProcessList, ProcessName):
 
 def Gantt_Chart(Name, ProcessInfo, CS):
 
-    # TurnIndex = int
     StartFinishProcess = [['', ''] for i in Name]
     Line1 = str(f'|')
     Line3 = str(f'{ProcessInfo[0][0]}')
-    # Line1 = str(f'|\t{Name[0]}\t|')
-    # Line3 = str(f'{ProcessInfo[0][0]}\t \t{ProcessInfo[0][0] + ProcessInfo[0][1]}')
-    # StartFinishProcess.append(
-    #     [ProcessInfo[0][0], ProcessInfo[0][0] + ProcessInfo[0][1]])
-    # ProcessInfo[0][2] = 0
     counter = 1
-    # CurentTime = int(ProcessInfo[0][0] + ProcessInfo[0][1])
     CurentTime = ProcessInfo[0][0]
     seen = []
 
@@ -86,14 +79,6 @@ def Gantt_Chart(Name, ProcessInfo, CS):
 
         if(ProcessInfo[TurnIndex][2] == 0):
             StartFinishProcess[TurnIndex][1] = CurentTime
-
-
-        # StartFinish = [int(CurentTime), int(
-        #     CurentTime+ProcessInfo[TurnIndex][1])]
-        # StartFinishProcess.insert(TurnIndex, StartFinish)
-
-        # CurentTime += int(ProcessInfo[TurnIndex][1])
-        # ProcessInfo[TurnIndex][2] = ProcessInfo[TurnIndex][2] - CurentTime 
 
         counter += 1
         flags = 0
