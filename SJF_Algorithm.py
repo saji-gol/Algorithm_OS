@@ -169,7 +169,7 @@ if A == 2:
         name = input()
 
         if(name == '1'):
-            os.system('py .\RoundRobin_Algorithm.py')
+            os.system('py .\SJF_Algorithm.py')
 
         while(name != '0'):
             ProcessName.append(name)

@@ -31,7 +31,6 @@ def Sort(ProcessList, ProcessName):
 
     return ProcessList, ProcessName
 
-
 def Gantt_Chart(Name, ProcessInfo, CS):
 
     TurnIndex = int
@@ -79,7 +78,6 @@ def Gantt_Chart(Name, ProcessInfo, CS):
     AWT(StartFinishProcess, ProcessInfo)
     return 0
 
-
 def ProcessTurn(ProcessInfo, CT):
     MinIndex = int
     c = int(0)
@@ -112,7 +110,7 @@ def ProcessTurn(ProcessInfo, CT):
         for i in ProcessInfo:
             if i[2] > 0:
                 Priority = (CT - i[0]) / i[2]
-                if MaxIndex != -1:
+                if MinIndex != -1:
                     if Priority > MaxPriority:
                         MaxPriority = Priority
                         MinIndex = x
@@ -123,7 +121,6 @@ def ProcessTurn(ProcessInfo, CT):
             x += 1
 
     return MinIndex, MultiR
-
 
 def ART(SF, PI):
     Sum = int(0)
@@ -137,7 +134,6 @@ def ART(SF, PI):
         c += 1
     AvrageRT = float(Sum/len(PI))
     print(f'\n\tAvrage Respons Time = {AvrageRT}')
-
 
 def AWT(SF, PI):
     Sum = int(0)
@@ -175,7 +171,7 @@ if A == 2:
         name = input()
 
         if(name == '1'):
-            os.system('py .\RoundRobin_Algorithm.py')
+            os.system('py .\HRRH_Algorithm.py')
 
         while(name != '0'):
             ProcessName.append(name)
@@ -259,4 +255,4 @@ Restart(1)
 ''')
 if int(Exit) == 1:
     os.system('cls')
-    os.system('py .\SJF_Algorithm.py')
+    os.system('py .\HRRH_Algorithm.py')

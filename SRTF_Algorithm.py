@@ -30,7 +30,6 @@ def Sort(ProcessList, ProcessName):
 
     return ProcessList, ProcessName
 
-
 def Gantt_Chart(Name, ProcessInfo, CS):
 
     StartFinishProcess = [['', ''] for i in Name]
@@ -134,7 +133,6 @@ def ProcessTurn(ProcessInfo, CT):
 
     return MinIndex, MultiR
 
-
 def ART(SF, PI):
     Sum = int(0)
     AvrageRT = float
@@ -147,7 +145,6 @@ def ART(SF, PI):
         c += 1
     AvrageRT = float(Sum/len(PI))
     print(f'\n\tAvrage Respons Time = {AvrageRT}')
-
 
 def AWT(SF, PI):
     Sum = int(0)
@@ -185,7 +182,7 @@ if A == 2:
         name = input()
 
         if(name == '1'):
-            os.system('py .\RoundRobin_Algorithm.py')
+            os.system('py .\SRTF_Algorithm.py')
 
         while(name != '0'):
             ProcessName.append(name)
@@ -268,4 +265,4 @@ Restart(1)
 ''')
 if int(Exit) == 1:
     os.system('cls')
-    os.system('py .\SJF_Algorithm.py')
+    os.system('py .\SRTF_Algorithm.py')
